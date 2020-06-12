@@ -7,18 +7,29 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 
+// Rutas
+import { APP_ROUTING } from './app.routes';
+
+// Services
+import { ProductsService } from './services/products.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     ProductsComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,    
+    APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    ProductsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
