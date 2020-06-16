@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../../services/products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  arrayProduct:Product[] = [];
+
+  constructor( private router:Router ) { }
 
   ngOnInit() {
   }
 
+  findProduct( termino:string ){
+
+    // console.log(this.arrayProduct);
+
+    this.router.navigate( ['/find-products', termino] );
+  }
 }

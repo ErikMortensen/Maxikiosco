@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <img [src]="product.img" class="img-fluid" alt="">
+            <br><br>
+            <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <h3>{{ product.nombre }}</h3>
+            <hr>
+            <p>
+                {{ product.desc }}
+            </p>
+            <div>
+                $ {{ product.precio }}
+            </div>
+        </div>
+
+    </div>
+
+</div>

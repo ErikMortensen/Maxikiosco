@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
+import { ProductsService, Product } from '../../services/products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -7,14 +8,22 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products:any[] = [];
+  products:Product[] = [];
 
-  constructor( private _productsService: ProductsService) { }
+  constructor( private _productsService: ProductsService,
+                private router:Router) { }
 
   ngOnInit() {
     this.products = this._productsService.getProducts();
     
-    console.log(this.products);
+    // console.log(this.products);
+  }
+
+  verProduct(idx:number){
+    this.router.navigate( ['/product', idx] );
   }
 
 }
+
+
+
