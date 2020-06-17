@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  arrayProduct:Product[] = [];
-
   constructor( private router:Router ) { }
 
   ngOnInit() {

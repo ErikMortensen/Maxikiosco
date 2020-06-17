@@ -16,6 +16,7 @@ import { APP_ROUTING } from './app.routes';
 import { ProductsService } from './services/products.service';
 import { ProductComponent } from './components/product/product.component';
 import { FindProductsComponent } from './components/find-products/find-products.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FindProductsComponent } from './components/find-products/find-products.
     AboutComponent,
     ProductComponent,
     FindProductsComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,    
