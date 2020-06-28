@@ -11,7 +11,7 @@
 
 <div class="card-columns">
 
-    <app-product-card [product]="product" [index]="i" *ngFor="let product of products; let i = index"></app-product-card>
+    <app-product-card [product]="product" [index]="product.idx" *ngFor="let product of products;"></app-product-card>
 
 
 </div>

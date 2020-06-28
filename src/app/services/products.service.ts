@@ -58,10 +58,14 @@ export class ProductsService {
         let productArray:Product[] = [];
         name = name.toLowerCase();
     
-        for(let product of this.products){
+        for(let i=0; i< this.products.length; i++){
+
+            let product = this.products[i];
+
             let nombre = product.nombre.toLowerCase();
 
             if( nombre.indexOf(name) >= 0){
+                product.idx = i;
                 productArray.push( product);
             }
         }
@@ -77,4 +81,5 @@ export interface Product{
     desc: string;
     img: string;
     precio: string;
+    idx?:number;
 }
